@@ -1,13 +1,13 @@
 import streamlit as st
 import datetime
 import matplotlib.pyplot as plt
-from psx import stocks
-import sys
 import os
+import sys
 
-# Add the 'src' folder to the path
+# 👉 Make sure the 'src' folder is added to the path
 sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
 
+from psx import stocks  # This works because __init__.py exposes it
 
 # --- Page Config ---
 st.set_page_config(page_title="PSX Stock Viewer", layout="centered")
